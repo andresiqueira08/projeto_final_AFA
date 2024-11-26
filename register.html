@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <img src="LOGOAFA1.png" class="top-right-image">
+    <form id="registerForm">
+        <h1>Crie Sua Conta</h1>
+        <div class="register">
+        <input type="text" id="username" placeholder="Nome de Usuário" required>
+        <input type="text" id="firstname" placeholder="Nome" required>
+        <input type="text" id="lastname" placeholder="Sobrenome" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <input type="password" id="confirmPassword" placeholder="Confirmar Senha" required>
+        <input type="tel" id="phone" placeholder="Telefone (opcional)">
+    </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">Li e estou de acordo com o <a href="#">Termo de Uso</a> e <a href="#">Política de Privacidade</a></label>
+        </div>
+        <button type="submit"><a href="index.html">Criar</a></button>
+    </form>
+
+    <script>
+        // Manipular o envio do formulário de cadastro
+        document.getElementById('signUpForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+      
+          signUpUser(name, email, password);
+        });
+      </script>
+</body>
+</html>
+
+
+
